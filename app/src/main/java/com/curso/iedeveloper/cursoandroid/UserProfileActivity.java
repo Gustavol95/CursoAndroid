@@ -7,8 +7,11 @@ import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
+import android.widget.TextView;
 
 public class UserProfileActivity extends AppCompatActivity {
+
+    private TextView nombre,ciudad,edad,contrasena,email;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -21,8 +24,8 @@ public class UserProfileActivity extends AppCompatActivity {
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Snackbar.make(view, "Tócame", Snackbar.LENGTH_LONG)
-                        .setAction("tocar", new View.OnClickListener() {
+                Snackbar.make(view, "Mira la otra vista que hice", Snackbar.LENGTH_LONG)
+                        .setAction("Acceder", new View.OnClickListener() {
                             @Override
                             public void onClick(View v) {
                                 startActivity(new Intent(UserProfileActivity.this,MainActivity.class));
@@ -31,6 +34,18 @@ public class UserProfileActivity extends AppCompatActivity {
 
             }
         });
+
+        nombre=(TextView)findViewById(R.id.txtNombre);
+        email=(TextView)findViewById(R.id.txtEmail);
+        contrasena=(TextView)findViewById(R.id.txtContrasena);
+        ciudad=(TextView)findViewById(R.id.txtCiudad);
+        edad=(TextView)findViewById(R.id.txtEdad);
+
+        nombre.setText(getIntent().getStringExtra("nombre"));
+        edad.setText(getIntent().getStringExtra("edad"));
+        ciudad.setText(getIntent().getStringExtra("ciudad"));
+        contrasena.setText(getIntent().getStringExtra("contrasena"));
+        email.setText(getIntent().getStringExtra("email"));
     }
 
 }

@@ -17,4 +17,19 @@
 
     <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
 
+    <style name="miestilo" parent="TextAppearance.AppCompat.Widget.Button.Colored">
+        <item name="android:textSize">15sp</item>
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:textStyle">italic</item>
+        <item name="android:typeface">monospace</item>
+
+    </style>
+
+    <style name="miestilo2" parent="TextAppearance.AppCompat.Widget.Button.Colored">
+        <item name="android:textSize">25sp</item>
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:typeface">monospace</item>
+
+    </style>
 </resources>

@@ -1,27 +1,95 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+<android.support.v4.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/scroll"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:clipToPadding="false"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
-    tools:context="com.curso.iedeveloper.cursoandroid.UserProfileActivity"
-    tools:showIn="@layout/activity_user_profile"
-    app:layout_scrollFlags="scroll|exitUntilCollapsed"
-    android:background="@android:color/black">
+    android:background="@color/backTranqui">
 
-    <android.support.v7.widget.CardView
+
+    <RelativeLayout
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
-        android:layout_margin="15dp"
-        android:layout_height="200dp"
-        xmlns:card_view="http://schemas.android.com/apk/res-auto"
-        card_view:cardElevation="8dp"
-        card_view:cardCornerRadius="8dp"
-        >
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        tools:context="com.curso.iedeveloper.cursoandroid.UserProfileActivity"
+        tools:showIn="@layout/activity_user_profile"
+        app:layout_scrollFlags="scroll|exitUntilCollapsed"
+ >
 
-    </android.support.v7.widget.CardView>
+        <android.support.v7.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_margin="15dp"
+            android:layout_height="200dp"
+            xmlns:card_view="http://schemas.android.com/apk/res-auto"
+            card_view:cardElevation="8dp"
+            card_view:cardCornerRadius="4dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/txtNombre"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="16sp"
+                    android:textAlignment="center"
+                    android:textStyle="bold"
+                    android:textColor="@color/fontColorCard"
+                    android:padding="4dp"/>
+                <TextView
+                    android:id="@+id/txtEmail"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="16sp"
+                    android:textAlignment="center"
+                    android:textStyle="bold"
+                    android:textColor="@color/fontColorCard"
+                    android:padding="4dp"/>
+                <TextView
+                    android:id="@+id/txtContrasena"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="16sp"
+                    android:textAlignment="center"
+                    android:textStyle="bold"
+                    android:textColor="@color/fontColorCard"
+                    android:padding="4dp"/>
+                <TextView
+                    android:id="@+id/txtEdad"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="16sp"
+                    android:textAlignment="center"
+                    android:textStyle="bold"
+                    android:textColor="@color/fontColorCard"
+                    android:padding="4dp"/>
+                <TextView
+                    android:id="@+id/txtCiudad"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="16sp"
+                    android:textAlignment="center"
+                    android:textStyle="bold"
+                    android:textColor="@color/fontColorCard"
+                    android:padding="4dp"/>
 
 
-</RelativeLayout>
+            </LinearLayout>
 
+        </android.support.v7.widget.CardView>
+
+
+    </RelativeLayout>
+
+
+
+
+</android.support.v4.widget.NestedScrollView>
 
