@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.curso.iedeveloper.cursoandroid.MainActivity"
+    android:background="@android:color/holo_red_light">
+
+    <FrameLayout
+        android:id="@+id/frame"
+        android:layout_width="match_parent"
+        android:layout_height="200dp">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/colorAccent"
+            android:src="@drawable/back"
+            android:scaleType="centerCrop"
+            />
+
+        <ImageView
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:background="@android:color/transparent"
+            android:layout_gravity="center"
+            android:src="@drawable/profile"/>
+    </FrameLayout>
+
+    <LinearLayout
+        android:id="@+id/linear"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_below="@+id/frame"
+        android:orientation="horizontal">
+
+        <ImageButton
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@android:color/black"
+            android:layout_margin="5dp"
+            android:src="@android:drawable/star_big_off"/>
+        <ImageButton
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@android:color/holo_green_dark"
+            android:layout_margin="5dp"
+            android:src="@android:drawable/ic_dialog_info"/>
+        <ImageButton
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@android:color/holo_blue_light"
+            android:layout_margin="5dp"
+            android:src="@android:drawable/ic_dialog_alert"/>
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/nombrePalabra"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Nombre"
+        android:layout_below="@+id/linear"
+        android:layout_margin="5dp"
+        android:textStyle="bold"
+        android:textColor="@android:color/white"
+        android:textSize="20sp"/>
+
+    <TextView
+        android:id="@+id/nombreTexto"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Gustavo"
+        android:layout_below="@+id/linear"
+        android:layout_margin="5dp"
+        android:textStyle="normal"
+        android:textColor="@android:color/white"
+        android:textSize="20sp"
+        android:layout_alignParentRight="true"/>
+    <TextView
+        android:id="@+id/apellidoPalabra"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Apellido"
+        android:layout_below="@+id/nombreTexto"
+        android:layout_margin="5dp"
+        android:textStyle="bold"
+        android:textColor="@android:color/white"
+        android:textSize="20sp"/>
+
+    <TextView
+        android:id="@+id/apellidoTexto"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="López Sánchez"
+        android:layout_below="@+id/nombrePalabra"
+        android:layout_margin="5dp"
+        android:textStyle="normal"
+        android:textColor="@android:color/white"
+        android:textSize="20sp"
+        android:layout_alignParentRight="true"/>
+
+    <TextView
+        android:id="@+id/correoPalabra"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Correo"
+        android:layout_below="@+id/apellidoPalabra"
+        android:layout_margin="5dp"
+        android:textStyle="bold"
+        android:textColor="@android:color/white"
+        android:textSize="20sp"/>
+
+    <TextView
+        android:id="@+id/correoTexto"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="GustavoL95@Outlook.cim"
+        android:layout_below="@+id/apellidoTexto"
+        android:layout_margin="5dp"
+        android:textStyle="normal"
+        android:textColor="@android:color/white"
+        android:textSize="20sp"
+        android:layout_alignParentRight="true"/>
+
+</RelativeLayout>
